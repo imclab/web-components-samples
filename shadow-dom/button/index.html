@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ShadowDOM Button Experiment</title>
+    <meta charset="utf-8" />
+    <script src="button.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        [].forEach.call(document.querySelectorAll('.button'), function(button) {
+          new Button(button);
+        });
+      });
+    </script>
+    <style>
+      div.button {
+        display: inline-block;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+    </header>
+    <section>
+  		<div class="button" title="To see an alert!"><span>Press Me!</span></div>
+  		<div class="button" title="To see an alert!"><span>Press Me!</span></div>
+  		<div class="button" title="To see an alert!"><span>Press Me!</span></div>
+    </section>
+    <footer>
+    </footer>
+  </body>
+</html>

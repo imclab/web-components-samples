@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ShadowDOM Knob Experiment</title>
+    <meta charset="utf-8" />
+    <script src="knob.js"></script>
+    <script>
+      window.onload = function() {
+        [].forEach.call(document.querySelectorAll('.knob'), function(div) {
+          var n = new knob(div);
+        });
+      };
+    </script>
+    <style>
+			#knobs {margin:0 0; padding:0 0; list-style:none;}
+    	#knobs li {margin:10px; height:40px; float:left;}
+    </style>
+  </head>
+  <body>
+    <header>
+    </header>
+    <section>
+<ul id="knobs">
+    <li><div class="knob" data-diameter="30" data-default="0" data-step="1" data-min="0" data-max="65545" data-min-angle="-120" data-max-angle="120" data-theme="knob_theme"></div></li>
+    <li><div class="knob" data-diameter="60" data-default="0" data-step="1" data-min="0" data-max="127" data-min-angle="-120" data-max-angle="120" data-theme="knob_theme"></div></li>
+    <li><div class="knob" data-diameter="100" data-default="0" data-step="1" data-min="0" data-max="65545" data-min-angle="0" data-max-angle="270" data-theme="knob_theme"></div></li>
+</ul>
+    </section>
+    <footer>
+    </footer>
+  </body>
+</html>
